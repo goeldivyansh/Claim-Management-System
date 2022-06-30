@@ -1,0 +1,22 @@
+.align{
+    flex: 1 1 auto;
+}
+a { 
+    color: white;
+}
+
+/* a:hover {
+    color: white;
+  } */
+
+  /* a:active {
+    color: #CAD5E2;
+  } */
+  a:visited {
+    color: white;
+  }
+
+.color-blue {
+    
+    background-color: #383CC1;
+}

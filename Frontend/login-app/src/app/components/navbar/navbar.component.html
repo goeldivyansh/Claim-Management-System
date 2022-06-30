@@ -1,0 +1,23 @@
+<nav class="navbar navbar-dark color-blue">
+  <span class = "container">
+  <a class="navbar-brand" routerLink="/">
+      <img src="../assets/home_icon1.png" width="30" height="30" class="" alt="">
+       Home
+  </a>
+
+  <span class="align"></span>
+    <a class="nav-link" *ngIf="!loggedIn" routerLink="/login" routerLinkActive="active" >Login</a>
+    <a class="nav-link" *ngIf="loggedIn" routerLink="/dashboard"  routerLinkActive="active">Dashboard</a>
+    <a class="nav-link" *ngIf="loggedIn"  (click) = "logoutUser()"  routerLinkActive="active">Logout</a>
+
+    </span>
+</nav>
+
+<!-- <mat-toolbar color="primary">
+    <span><a mat-icon-button routerLink="/"><img src="../assets/home_icon1.png">  Home</a></span>
+    <span class="align"></span>
+    <a mat-icon-button *ngIf="!loggedIn" routerLink="/login" >Login</a>
+    <a class= "dashboard mr-5"mat-icon-button *ngIf="loggedIn" routerLink="/dashboard">Dashboard</a>
+    <a mat-icon-button *ngIf="loggedIn"  (click) = "logoutUser()">Logout</a>
+ 
+</mat-toolbar> -->

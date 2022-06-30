@@ -1,0 +1,76 @@
+<div class="bootstrap-wrapper">
+    <div class="container mt" style="text-align: center;">
+
+        <div class="row">
+
+
+            <div class="col-md-6 offset-md-3">
+
+
+           <h1>View Claim Status Here!</h1> 
+           <form (ngSubmit) = "getClaimStatus()">
+
+            <mat-form-field class="full-width">
+                <mat-label>Enter Claim ID here</mat-label>
+                <input  
+                required
+                name= "claimId"
+                matInput
+                [(ngModel)] = "claimId"
+                type="text" />
+            </mat-form-field>
+
+         <div class = "container">
+
+             <button mat-raised-button color="primary"
+             type="submit">View Claim Status</button>
+         </div>
+
+         <div class="container text-center" *ngIf="isVisible">
+            <h1 class="mt-3">Claim Details</h1>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="bg-light">Claim ID : </td>
+                        <td>{{fetchedId}}</td>
+                    </tr>
+                    <tr>
+                        <td>Claim Status :</td>
+                        <td class="bg-light">{{claimStatus}}</td>
+                    </tr>
+                    <tr>
+                        <td class="bg-light">Claim Analysis :</td>
+                        <td>{{claimDesc}}</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+
+         <!-- <div class="container mt">
+            <p>{{fetchedId}}</p>
+            <p>{{claimStatus}}</p>
+            <p>{{claimDesc}}</p>
+            
+         </div> -->
+           
+         
+        
+
+           </form>
+
+
+
+           
+           
+
+
+
+            </div>
+        </div>
+
+    
+
+    </div>
+</div>

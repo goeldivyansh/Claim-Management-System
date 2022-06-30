@@ -1,0 +1,110 @@
+<div class="bootstrap-wrapper">
+
+    <div class="container mt">
+ 
+      <div class="row">
+ 
+          <div class="col-md-6 offset-md-3 full-width">
+            
+ 
+             <h1 >Submit Claim Details Here!</h1>
+             <form (ngSubmit) = "submitClaim()">
+                <mat-form-field class="full-width">
+                 <mat-label>Status</mat-label>
+                 <input
+                 required="true" 
+                 [(ngModel)] = "claimDetails.status"
+                   type="text"
+                   name="status" 
+                   matInput/>
+                </mat-form-field>
+                <br>
+              
+                
+                <mat-form-field class="full-width">
+                 <mat-label>Description</mat-label>
+                 <textarea
+                 required
+                 [(ngModel)] = "claimDetails.description"
+                 name="description"
+                 matInput> </textarea>
+                </mat-form-field>
+
+                <br>
+
+                <mat-form-field class="full-width">
+                    <mat-label>Remarks</mat-label>
+                    <input
+                    required="true" 
+                    [(ngModel)] = "claimDetails.remarks"
+                      type="text"
+                      name="remarks" 
+                      matInput/>
+                   </mat-form-field>
+
+                   <mat-form-field class="full-width">
+                    <mat-label>Claim Amount</mat-label>
+                    <input
+                    required="true" 
+                    [(ngModel)] = "claimDetails.claimAmount"
+                      type="number"
+                      name="remarks" 
+                      matInput/>
+                   </mat-form-field>
+
+                   <mat-form-field class="full-width">
+                    <mat-label>Hospital ID</mat-label>
+                    <input
+                    required="true" 
+                    [(ngModel)] = "claimDetails.hospitalId"
+                      type="text"
+                      name="hospitalId" 
+                      matInput/>
+                   </mat-form-field>
+
+                   <mat-form-field class="full-width">
+                    <mat-label>Benefit ID</mat-label>
+                    <input
+                    required="true"  
+                    [(ngModel)] = "claimDetails.benefitId"
+                      type="text"
+                      name="BenefitId" 
+                      matInput/>
+                   </mat-form-field>
+
+                   <mat-form-field class="full-width">
+                    <mat-label>Policy ID</mat-label>
+                    <input
+                    required="true"  
+                    [(ngModel)] = "claimDetails.policyId"
+                      type="text"
+                      name="PolicyId" 
+                      matInput/>
+                   </mat-form-field>
+
+                   <mat-form-field class="full-width">
+                    <mat-label>Member ID</mat-label>
+                    <input
+                    required="true"  
+                    [(ngModel)] = "claimDetails.memberId"
+                      type="text"
+                      name="MemberId" 
+                      matInput/>
+                   </mat-form-field>
+ 
+                <div class="container" style="text-align: center;">
+                  <button mat-raised-button color="primary" type="submit" style="margin: 10px;">Submit</button>
+                  <button mat-raised-button color="accent" type="reset">Reset</button>
+                </div>
+             </form>
+
+             <p class="mt">{{message}}</p>
+       
+          </div>
+ 
+      </div>
+ 
+    </div>
+ 
+ 
+ </div>

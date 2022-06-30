@@ -1,0 +1,48 @@
+<div class="bootstrap-wrapper">
+    <div class="container mt" style="text-align: center;">
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1>View Bills Here!</h1>
+                <form (ngSubmit)="getBills()">
+
+                    <mat-form-field class="full-width">
+                        <mat-label>Enter Member ID here</mat-label>
+                        <input required name="memberId" matInput [(ngModel)]="memberId" type="text" />
+                    </mat-form-field>
+
+                    <div class="container">
+                        <button mat-raised-button color="primary" type="submit">View Bills</button>
+                    </div>
+                    <div class="container text-center" *ngIf="isVisible">
+                        <h1 class="mt-3">Bill Details</h1>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td class="bg-light">Policy ID :</td>
+                                    <td>{{policyId}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Due Amount :</td>
+                                    <td class="bg-light">{{dueAmount}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-light">Due Date : </td>
+                                    <td>{{dueDate}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Last Paid Date :</td>
+                                    <td class="bg-light">{{lastPaidDate}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-light">Late Charge :</td>
+                                    <td>{{lateCharge}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
